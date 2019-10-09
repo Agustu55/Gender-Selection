@@ -1,0 +1,46 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Instructions
+{% endblock %}
+
+{% block content %}
+
+{% load otree_tags staticfiles %}
+
+<div class="instructions well well-lg">
+
+    <h2 class="panel-sub-heading">
+
+    </h2>
+
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'global/matrix.css' %}"/>
+
+   <p>
+              The next part of the experiment is task B. The score that you receive in this task will count to towards your total payoff.
+            </p>
+            <p>
+                Task B is identical to task A however slightly more difficult and you will have more time .
+                In this task you will have 5 minutes to answer as many questions as possible.
+              Once you have entered your summation, click the <b>Next</b> button or press the <b>Enter</b> key.
+            </p>
+
+            <p>
+                You will get <b>1 point for each correct answer</b>.
+                  Your score will not decrease if you provide an incorrect answer.
+    </p>
+
+            <h3>Before preceding please select a name that will be used when your task A score is shared</h3>
+            <h3>In task A you scored {{ total_payoff }}</h3>
+
+</div>
+
+<br>
+    {% formfield player.nametag %}
+
+      {% next_button %}
+
+
+{% endblock %}
