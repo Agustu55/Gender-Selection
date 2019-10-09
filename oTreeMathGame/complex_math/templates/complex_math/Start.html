@@ -1,0 +1,44 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Instructions
+{% endblock %}
+
+{% block content %}
+
+{% load otree_tags staticfiles %}
+
+<div class="instructions well well-lg">
+
+    <h2 class="panel-sub-heading">
+
+    </h2>
+
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'global/matrix.css' %}"/>
+
+<p>
+  In this part of the experiment you will be presented with a series of two two-digit numbers (for example, 11 and 22) which you will have to add (11 + 22 = 33).
+</p>
+<p>
+      You will have 2 minutes to answer as many questions as possible.
+      Once you have entered your summation, click the <b>Next</b> button or press the <b>Enter</b> key.
+</p>
+<p>
+    You will get <b>1 point for each correct answer</b>.
+    Your score will not decrease if you provide an incorrect answer.
+</p>
+
+
+<p>
+    After you have completed this task you will send your score to the selectors under a screen name for anonymity.
+</p>
+
+
+</div>
+
+      {% next_button %}
+
+
+{% endblock %}
